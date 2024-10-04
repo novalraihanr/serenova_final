@@ -8,6 +8,7 @@ import TaskList from "@components/task/TaskList";
 import { useEffect, useState } from "react";
 import PopupAdd from "@components/task/PopupAdd";
 import MiniCalender from "@components/dashboard/MiniCalender";
+import NavAtas from "@components/NavAtas";
 
 const Page = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
