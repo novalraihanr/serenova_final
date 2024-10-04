@@ -2,13 +2,18 @@
 
 import axiosFetch from "@lib/axiosFetch";
 
-import NavbarKiri from "@components/NavbarKiri";
+// import NavbarKiri from "@components/NavbarKiri";
 import Calendar from "@components/task/Calendar";
 import TaskList from "@components/task/TaskList";
 import { useEffect, useState } from "react";
 import PopupAdd from "@components/task/PopupAdd";
 import MiniCalender from "@components/dashboard/MiniCalender";
+import dynamic from "next/dynamic";
 import NavAtas from "@components/NavAtas";
+
+const NavbarKiri = dynamic(() => import('@components/NavbarKiri'), {
+    ssr: false,
+});
 
 const Page = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -43,7 +48,7 @@ const Page = () => {
   //   };
 
   return (
-    <div className="flex h-screen flex-col md:flex-row">
+    <div className="flex-1 h-full p-4 overflow-y-auto">
       {/* NAVBAR ATAS FOR SMALL SCREENS */}
       <div className="block md:hidden">
         <NavAtas />

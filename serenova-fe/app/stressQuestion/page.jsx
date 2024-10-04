@@ -2,10 +2,11 @@
 
 import axios from "axios";
 import { useState, useEffect } from "react";
-import NavbarKiri from "@components/NavbarKiri";
+// import NavbarKiri from "@components/NavbarKiri";
 import Likert5 from "@components/stressQuestion/Likert5";
 import LikertTF from "@components/stressQuestion/LikertTF";
 import NavAtas from "@components/NavAtas";
+import dynamic from "next/dynamic";
 
 const fetchQuestions = async () => {
     const response = await fetch('/api/pertanyaan');
@@ -15,6 +16,10 @@ const fetchQuestions = async () => {
     const data = await response.json();
     return data;
 };
+
+const NavbarKiri = dynamic(() => import('@components/NavbarKiri'), {
+    ssr: false,
+});
 
 const Page = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
