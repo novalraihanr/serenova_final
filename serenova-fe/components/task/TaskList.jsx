@@ -44,6 +44,12 @@ const TaskList = ({ selectedDate, tasks }) => {
             return taskDate.toDateString() === date.toDateString();
         });
     };
+
+    const taskTypeImages = {
+        Working: "/assets/images/dashboard/working.svg",
+        Workout: "/assets/images/dashboard/work.svg",
+        Daily: "/assets/images/dashboard/daily.svg",
+    };
     const filteredTasks = getTasksForSelectedDate(selectedDate);
 
     return (
@@ -76,12 +82,14 @@ const TaskList = ({ selectedDate, tasks }) => {
                         style={{ borderColor: taskTypeColors[task.jenis] || "#00B4BE" }}
                     >
                     </div>
+                    {/* Ganti gambar berdasarkan tipe task */}
                     <div className="overflow-hidden rounded-full w-10 h-10 2xl:w-14 2xl:h-14 mx-3">
                         <Image
-                            src="/assets/images/landingPage/haikal.jpg"
+                            src={taskTypeImages[task.type] || "/assets/images/tasks/daily.svg"} // Gambar default jika tipe tidak ditemukan
                             width={80}
                             height={80}
                             className="object-cover w-full h-full"
+                            alt={`${task.type} task image`} 
                         />
                     </div>
                     <div className="text-start">
