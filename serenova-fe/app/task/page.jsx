@@ -48,7 +48,7 @@ const Page = () => {
   //   };
 
   return (
-    <div className="flex-1 h-full p-4 overflow-y-auto">
+    <div className="flex h-screen flex-col md:flex-row">
       {/* NAVBAR ATAS FOR SMALL SCREENS */}
       <div className="block md:hidden">
         <NavAtas />
