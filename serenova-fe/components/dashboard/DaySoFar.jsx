@@ -44,7 +44,7 @@ const DaySoFar = () => {
 
     return (
         <div>
-            <h1 className="font-bold text-bgButton">Your Day So Far</h1>
+            <h1 className="font-bold text-bgButton">Your Focus Today</h1>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-3 mt-3">
                 {/* CARD 1 */}
                 <div className="rounded-lg flex pl-3 overflow-hidden relative mb-4 sm:mb-0">
