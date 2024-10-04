@@ -66,7 +66,7 @@ const DaySoFar = () => {
                                 Working<br></br>
                                 <span className="text-lg sm:text-xl" id="work">10%</span>
                             </p>
-                            <p className="text-[7px] text-bgButton">Completed Activity</p>
+                            <p className="text-[7px] text-bgButton">of Today's Focus</p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@ const DaySoFar = () => {
                                 Daily<br></br>
                                 <span className="text-lg sm:text-xl" id="daily">20%</span>
                             </p>
-                            <p className="text-[7px] text-bgButton">Completed Activity</p>
+                            <p className="text-[7px] text-bgButton">of Today's Focus</p>
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@ const DaySoFar = () => {
                                 Workout<br></br>
                                 <span className="text-lg sm:text-xl" id="exercise">25%</span>
                             </p>
-                            <p className="text-[7px] text-bgButton">Completed Activity</p>
+                            <p className="text-[7px] text-bgButton">of Today's Focus</p>
                         </div>
                     </div>
                 </div>
